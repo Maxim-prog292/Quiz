@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", sans-serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px #000;
+  overflow: hidden;
+  background-image: url(/images/IMG_1044.JPG);
+  background-position: center -800px;
+  background-size: 100%;
+}
+
+#background {
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(30pt);
+  transition: filter 0.8s ease, background-image 1s ease-in-out;
+  z-index: 0;
+}
+
+#background.unblurred {
+  filter: blur(0);
+}
+
+#menu,
+#game,
+#result {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.result-buttons {
+  margin-top: calc(100vh / 3);
+}
+#menu,
+#result {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#menu h1,
+#question-text,
+#result-text {
+  font-size: 65px;
+}
+#menu span {
+  font-size: 36px;
+}
+
+.topics {
+  width: 1300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-self: center;
+  justify-content: space-around;
+  gap: 15px;
+  margin-top: calc(100vh / 3);
+}
+.topic-btn,
+.answer-btn,
+#retry,
+#back {
+  width: 500px;
+  height: 120px;
+  font-size: 34px;
+  color: #000000;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.4s, transform 0.2s, box-shadow 0.3s;
+}
+.topic-btn {
+  width: 400px;
+}
+
+.topic-btn:hover,
+#retry:hover,
+#back:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.topic-btn:active,
+#retry:active,
+#back:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#game {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  animation: fadeIn 1s forwards;
+}
+
+#question-container {
+  margin-top: 80px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+#answers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.answer-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.03);
+}
+
+.correct {
+  background: rgba(0, 255, 0, 0.5);
+  transition: background 0.5s ease;
+}
+
+.wrong {
+  background: rgba(255, 0, 0, 0.5);
+  transition: background 0.5s ease;
+}
+
+#answer-description {
+  margin-top: 25px;
+  font-size: 44px;
+  background: rgba(0, 255, 0, 0.8);
+  border-radius: 24px;
+  padding: 20px;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#answer-description.show {
+  opacity: 1;
+}
+.hidden {
+  display: none !important;
+}

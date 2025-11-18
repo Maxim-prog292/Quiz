@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новогодняя викторина</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="background"></div>
+
+    <div id="menu">
+      <h1>🎅 Новогодняя викторина 🎄</h1>
+      <span>Выберете тему</span>
+      <div class="topics">
+        <button class="topic-btn" data-topic="newyear">Новый год</button>
+        <button class="topic-btn" data-topic="winter">Зима</button>
+        <button class="topic-btn" data-topic="russia">
+          Новый год в России
+        </button>
+        <button class="topic-btn" data-topic="history">История</button>
+      </div>
+    </div>
+
+    <div id="game" class="hidden">
+      <div id="question-container">
+        <h2 id="question-text"></h2>
+        <p id="answer-description" class="hidden"></p>
+      </div>
+
+      <div id="answers"></div>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2 id="result-text"></h2>
+      <div class="result-buttons">
+        <button id="retry">Ещё раз</button>
+        <button id="back">К выбору темы</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
