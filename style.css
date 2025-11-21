@@ -1,10 +1,13 @@
+* {
+  user-select: none;
+}
 body {
   margin: 0;
   font-family: "Comic Sans MS", sans-serif;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 5px #000;
   overflow: hidden;
-  background-image: url(/images/IMG_1044.JPG);
+  background-image: url(images/IMG_1044.JPG);
   background-position: center -800px;
   background-size: 100%;
 }
@@ -154,4 +157,22 @@ body {
 }
 .hidden {
   display: none !important;
+}
+
+#exit-button {
+  display: inline-block;
+  width: 300px;
+  height: 70px;
+  margin-top: 40px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 70px;
+  font-size: 34px;
+  color: #000000;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.4s, transform 0.2s, box-shadow 0.3s;
 }
